@@ -1,6 +1,6 @@
 ---
 - name: Configure web server
-  hosts: servers
+  hosts: all
   become: yes
 
   tasks:
