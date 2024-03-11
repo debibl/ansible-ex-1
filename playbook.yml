@@ -28,6 +28,14 @@
         update: no
         clone: yes
 
+    - name: Replace index.html
+      ansible.builtin.copy:
+        src: index.html
+        dest: /home/ansible-worker/www/stud-template/index.html
+        owner: ansible-worker
+        group: ansible-worker
+        mode: 0644
+
     - name: Install Nginx
       ansible.builtin.apt:
         name: nginx
