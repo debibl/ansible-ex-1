@@ -36,6 +36,15 @@
         group: ansible-worker
         mode: 0644
 
+    - name: Set read permissions for ansible-worker directory
+      ansible.builtin.file:
+        path: /home/ansible-worker
+        owner: ansible-worker
+        group: ansible-worker
+        mode: "0755"
+        recurse: yes
+
+
     - name: Install Nginx
       ansible.builtin.apt:
         name: nginx
